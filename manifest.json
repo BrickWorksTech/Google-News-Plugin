@@ -1,0 +1,23 @@
+{
+    "manifest_version": 3,
+    "name": "Google News De-Centerer",
+    "description": "Removes margins and padding to make Google News layout full-width.",
+    "version": "1.0",
+    "permissions": [
+        "scripting"
+    ],
+    "content_scripts": [
+        {
+            "matches": [
+                "https://news.google.com/*"
+            ],
+            "js": [
+                "content.js"
+            ],
+            "run_at": "document_idle"
+        }
+    ],
+    "icons": {
+        "48": "icon.png"
+    }
+}
